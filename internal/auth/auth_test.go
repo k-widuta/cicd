@@ -26,7 +26,7 @@ func TestAuth(t *testing.T) {
 	}{
 		"no-header":    {header: "", req: *req, want: WantType{text: "", err: "no authorization header included"}},
 		"wrong-header": {header: "hello", req: *req, want: WantType{text: "", err: "malformed authorization header"}},
-		"success":      {header: "hello", req: *req, want: WantType{text: "", err: "duupa"}},
+		"success":      {header: "hello", req: *req, want: WantType{text: "", err: ""}},
 	}
 
 	for name, tc := range tests {
